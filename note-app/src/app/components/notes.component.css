@@ -1,0 +1,29 @@
+.note{
+    width: 220px !important; 
+    height: 140px !important;
+
+}
+
+.delete-note{
+    zoom: 0.7;
+}
+
+.name-note{
+    background: transparent;
+    color: white;
+    width: 160px;
+
+}
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+.note-text{
+    height: 80px;
+    background: transparent;
+    color: white;
+}

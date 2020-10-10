@@ -1,0 +1,30 @@
+<div class="w-100 h-100 mt-3">
+    <div class=" w-100 d-flex justify-content-center">
+        <h2>Notes App</h2>
+    </div>
+    <div class="w-100 h-100">
+        <div class="ml-3">
+            <button mat-raised-button color="primary" (click)="addNote()">Agregar una Nota</button>
+            <div class="mt-2 d-flex justify-content-start flex-wrap">
+                <ng-container *ngFor="let note of notes; let i=index">
+                    <div class="m-0 p-0 ml-1 mt-1 note" [ngStyle]="{'background': note.color }" >
+                        <div class="m-2 d-flex justify-content-between">
+                            <button (click)="deleteNote(i)" mat-fab class="delete-note" color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                            <div class="name-note">
+                                <input class="name-note" [(ngModel)]="note.name" (ngModelChange)="noteChanged(i)"  type="text" placeholder="Ingresa un nombre">
+                            </div>
+                            
+                        </div>
+                        <div class="w-100 h-100">
+                            <textarea class="w-100 note-text" [(ngModel)]="note.value" (ngModelChange)="noteChanged(i)"></textarea>
+                        </div>
+                       
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+    </div>
+</div>
