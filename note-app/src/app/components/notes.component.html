@@ -5,7 +5,7 @@
     <div class="w-100 h-100">
         <div class="ml-3">
             <button mat-raised-button color="primary" (click)="addNote()">Agregar una Nota</button>
-            <div class="mt-2 d-flex justify-content-start flex-wrap">
+            <div *ngIf="notes.length > 0" class="mt-2 d-flex justify-content-start flex-wrap">
                 <ng-container *ngFor="let note of notes; let i=index">
                     <div class="m-0 p-0 ml-1 mt-1 note" [ngStyle]="{'background': note.color }" >
                         <div class="m-2 d-flex justify-content-between">
