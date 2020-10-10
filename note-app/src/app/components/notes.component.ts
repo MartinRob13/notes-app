@@ -19,10 +19,13 @@ export class NotesComponent implements OnInit {
     }
 
     private getColor(){
-        let letters = '01234567DEF'; //de aqui saco los valores para el color, quite algunos numeros y letras para que contrastaran con el color blanco de las letras
+        let initial ='012345';
+        let letters = '0123456789DEF'; //de aqui saco los valores para el color, quite algunos numeros y letras para que contrastaran con el color blanco de las letras
         let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 11)]; //obtengo una posicion rango dentro de las 11 opciones que tengo
+        color += initial[Math.floor(Math.random() * 6)]; //obtengo el valor inicial, estos para que sean obscuros
+
+        for (let i = 0; i < 5; i++) {
+            color += letters[Math.floor(Math.random() * 13)]; //obtengo una posicion rango dentro de las 13 opciones que tengo
         }
         return color; //regreso el color
     }
